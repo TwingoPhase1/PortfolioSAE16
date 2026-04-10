@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets SAÉ - Yanis Durel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Parkinsans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Styles Bento Grid Organique */
+        .bento-container {
+            display: flex;
+            flex-direction: column;
+            gap: 6rem;
+            padding-bottom: 5rem;
+        }
+
+        .sae-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .sae-header h2 {
+            font-size: 2.2rem;
+            color: var(--text-primary);
+        }
+
+        .sae-header .badge {
+            margin-bottom: 1rem;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(220px, auto);
+            gap: 1.5rem;
+        }
+
+        /* Organic card shapes */
+        .bento-card {
+            background: var(--bg-surface);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bento-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: var(--shadow-soft);
+            background: var(--bg-surface-hover);
+            z-index: 10;
+        }
+
+        /* Specific Spans */
+        .span-col-4 { grid-column: span 4; }
+        .span-col-3 { grid-column: span 3; }
+        .span-col-2 { grid-column: span 2; }
+        .span-col-1 { grid-column: span 1; }
+        
+        .span-row-2 { grid-row: span 2; }
+        
+        /* Titles inside bento */
+        .bento-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .bento-text {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* Responsive Bento */
+        @media (max-width: 992px) {
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .span-col-3, .span-col-4 { grid-column: span 2; }
+        }
+        
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+            .span-col-2, .span-col-3, .span-col-4 { grid-column: span 1; }
+            .span-row-2 { grid-row: span 1; }
+        }
+
+        /* Custom Colors for SAEs to make it organic */
+        .sae11-bg { background: linear-gradient(145deg, rgba(212, 163, 115, 0.05), transparent); }
+        .sae14-bg { background: linear-gradient(145deg, rgba(226, 180, 189, 0.05), transparent); }
+        .sae15-bg { background: linear-gradient(145deg, rgba(165, 188, 167, 0.05), transparent); }
+    </style>
+</head>
+<body>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">Y</span>D.
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="presentation.html">Présentation</a></li>
+                <li><a href="bilans.html">Bilans</a></li>
+                <li><a href="projets.html" class="active">Projets</a></li>
+            </ul>
+            <a href="CV Yanis Durel RT 1A (1).pdf" target="_blank" class="btn btn-outline nav-btn">Mon CV</a>
+        </div>
+    </nav>
+
+    <main style="padding-top: 120px;">
+        <section class="section-header reveal">
+            <h1>Mes Projets & SAÉs</h1>
+            <div class="separator"></div>
+            <p>Découvrez mes réalisations techniques sous forme de tableaux de bord interactifs.</p>
+        </section>
+
+        <section class="bento-container" style="max-width: var(--container-width); margin: 0 auto; padding: 0 2rem;">
+
+            <!-- SAE 11: Bento Grid -->
+            <div class="sae-block reveal">
+                <div class="sae-header">
+                    <span class="badge">SAÉ 11</span>
+                    <h2>Cyber & Hygiène Informatique</h2>
+                </div>
+                <div class="bento-grid">
+                    <!-- Contexte -->
+                    <div class="bento-card span-col-2 span-row-2 sae11-bg" style="border-radius: 60px 40px 40px 60px;">
+                        <h3 class="bento-title text-gradient">1. Contexte</h3>
+                        <p class="bento-text">
+                            <strong>Objectifs :</strong> Comprendre les enjeux vitaux de la cybersécurité moderne et acquérir de bonnes pratiques d'hygiène informatique pour prévenir les attaques. <br><br>
+                            <strong>Environnement Technique :</strong> Laboratoire réseau, Outils de sensibilisation (Phishing, KeePass).<br><br>
+                            <strong>Rôle :</strong> Audit systémique et production d'un rapport de recommandations pour un service non-technique.
+                        </p>
+                    </div>
+                    <!-- ACs -->
+                    <div class="bento-card span-col-2">
+                        <h3 class="bento-title text-gradient-alt">2. Apprentissages Critiques</h3>
+                        <ul class="bento-text" style="padding-left: 1.5rem;">
+                            <li><strong>AC1 :</strong> Identifier les menaces courantes (Social engineering).</li>
+                            <li><strong>AC2 :</strong> Principes de sécurité sur terminaux.</li>
+                            <li><strong>AC3 :</strong> Sensibiliser les utilisateurs via des guides.</li>
+                        </ul>
+                    </div>
+                    <!-- Traces -->
+                    <div class="bento-card span-col-2" style="justify-content: center; align-items: center; text-align: center;">
+                        <h3 class="bento-title">3. Trace & Preuves</h3>
+                        <div style="background: rgba(0,0,0,0.4); padding: 1rem; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); width: 100%;">
+                            <span style="color: white; font-weight: 600;">Guide Utilisateur KeePass</span>
+                            <p style="font-size: 0.8rem; margin-top: 0.5rem; font-style: italic;">"Document d'explication de chiffrement USB."</p>
+                        </div>
+                    </div>
+                    <!-- Analyse -->
+                    <div class="bento-card span-col-4 sae11-bg" style="border-radius: 40px 60px 60px 40px;">
+                        <h3 class="bento-title text-gradient">4. Analyse Réflexive</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                            <div>
+                                <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Difficultés</h4>
+                                <p class="bento-text">Verbaliser les attaques compliquées pour les rendre compréhensibles au grand public.</p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Solutions</h4>
+                                <p class="bento-text">Multiplication des lectures de cas réels (ANSSI) pour simplifier par analogie.</p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Acquis</h4>
+                                <p class="bento-text">La cybersécurité repose à 80% sur l'humain. Une approche *Zero Trust* m'est désormais indispensable.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAE 14: Bento Grid -->
+            <div class="sae-block reveal reveal-delay-1">
+                <div class="sae-header mt-8">
+                    <span class="badge" style="color: var(--accent-purple); border-color: rgba(226, 180, 189, 0.5); background: rgba(226, 180, 189, 0.1);">SAÉ 14</span>
+                    <h2>Se Présenter sur Internet</h2>
+                </div>
+                <div class="bento-grid">
+                    <!-- Traces au format large prominent -->
+                    <div class="bento-card span-col-3 sae14-bg" style="border-radius: 50px 70px 40px 50px;">
+                        <div style="display: flex; justify-content: space-between; align-items: start;">
+                            <div>
+                                <h3 class="bento-title">3. Trace GitHub Principale</h3>
+                                <p class="bento-text mb-4">Versionnement continu du Portfolio via Git.</p>
+                                <a href="https://github.com/TwingoPhase1/rdndo" target="_blank" class="btn btn-secondary" style="margin-top: 1rem;">Accéder au Dépôt</a>
+                            </div>
+                            <div style="background: rgba(0,0,0,0.6); padding: 1.5rem; border-radius: 30px; border: 1px solid rgba(255,255,255,0.05); max-width: 300px;">
+                                <pre style="color: #a1a1aa; font-family: monospace; font-size: 0.8rem; white-space: pre-wrap;">commit d8e74f2 "Init projet"
+commit 5a2b1c3 "Mise en page bento"</pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Context petit -->
+                    <div class="bento-card span-col-1" style="border-radius: 30px 50px 50px 30px;">
+                        <h3 class="bento-title" style="color: var(--accent-purple);">1. Contexte</h3>
+                        <p class="bento-text">HTML, CSS, Git, Github Pages. Objectif : Maîtriser son identité numérique et versionner.</p>
+                    </div>
+                    <!-- ACs -->
+                    <div class="bento-card span-col-2">
+                        <h3 class="bento-title">2. Apprentissages (AC)</h3>
+                        <ul class="bento-text" style="padding-left: 1rem;">
+                            <li><strong>AC1 :</strong> Outil de com numérique.</li>
+                            <li><strong>AC2 :</strong> Identité & Paramètres visibilité.</li>
+                            <li><strong>AC3 :</strong> Décentralisation Git/Github.</li>
+                        </ul>
+                    </div>
+                    <!-- Analyse -->
+                    <div class="bento-card span-col-2 sae14-bg">
+                        <h3 class="bento-title">4. Analyse Réflexive</h3>
+                        <p class="bento-text">
+                            <strong>Défis :</strong> Gérer l'hébergement continu via Git sans erreur de merge.<br><br>
+                            <strong>Solutions :</strong> Entraînement intensif sur les branches locales.<br><br>
+                            <strong>Acquis :</strong> Savoir construire ce CV en ligne et utiliser Git m'ouvre les portes d'approches collaboratives (CI/CD) pour l'avenir professionnel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAE 15: Bento Grid -->
+            <div class="sae-block reveal reveal-delay-2">
+                <div class="sae-header mt-8">
+                    <span class="badge" style="color: var(--accent-cyan); border-color: rgba(165, 188, 167, 0.5); background: rgba(165, 188, 167, 0.1);">SAÉ 15</span>
+                    <h2>Traiter des Données (Python)</h2>
+                </div>
+                <div class="bento-grid">
+                    <!-- Context & AC Combo -->
+                    <div class="bento-card span-col-2 sae15-bg" style="border-radius: 70px 40px 40px 50px;">
+                        <h3 class="bento-title text-gradient-alt">1. Contexte & Objectifs</h3>
+                        <p class="bento-text" style="margin-bottom: 1.5rem;">
+                            Savoir exploiter et traiter une grande quantité de données issues de sources externes à l'aide de Python (Pandas/Matplotlib). 
+                            L'application <code>SAE15_V1.py</code> automatise la lecture CSV/JSON.
+                        </p>
+                        <ul class="bento-text" style="padding-left: 1rem;">
+                            <li><strong>AC1 :</strong> Programmer des scripts batchs.</li>
+                            <li><strong>AC2 :</strong> Représentations visuelles adaptées.</li>
+                        </ul>
+                    </div>
+                    <!-- Trace Code Block -->
+                    <div class="bento-card span-col-2 span-row-2" style="background: rgba(10, 10, 15, 0.8); border-radius: 40px 60px 40px 40px;">
+                        <div style="display: flex; justify-content: space-between; align-items:center; margin-bottom: 1.5rem;">
+                            <h3 style="color: white; font-size: 1.2rem;">3. Script SAE15_V1.py</h3>
+                            <span class="badge" style="margin: 0;">Python</span>
+                        </div>
+                        <pre style="color: #a1a1aa; font-family: monospace; font-size: 0.95rem; overflow-x: auto; white-space: pre-wrap; line-height: 1.6;">def traiter_fichier_csv(filepath):
+    """
+    Fonction principale de lecture
+    """
+    import csv
+    donnees_propres = []
+    # Test Try-Except sur logs corrompus
+    try:
+        with open(filepath, 'r') as f:
+            reader = csv.reader(f)
+            # Traitement asynchrone interne
+    except FileNotFoundError:
+        pass</pre>
+                    </div>
+                    <!-- Analyse -->
+                    <div class="bento-card span-col-2 sae15-bg" style="border-radius: 40px 40px 60px 40px;">
+                        <h3 class="bento-title">4. Rétrospective & Action</h3>
+                        <p class="bento-text">
+                            <strong>Défis :</strong> Gestions d'erreurs (format des données clients parfois inattendu).<br><br>
+                            <strong>Solutions :</strong> Blocs Try-Except et Data cleaning pré-ingestion.<br><br>
+                            <strong>Synthèse :</strong> Cette SAE m'a éloigné de la syntaxe de base pour toucher l'automatisation. Logique désormais naturelle qui servira au scripting de serveurs (Bash/Python).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="glass">
+        <div class="footer-content">
+            <p>&copy; 2026 Yanis Durel - Portfolio BUT R&T.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
