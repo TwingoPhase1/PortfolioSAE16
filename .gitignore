@@ -1,0 +1,31 @@
+# Système d'exploitation
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editeurs et IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.sublime-project
+.sublime-workspace
+
+# Python (dossiers virtuels, caches, etc.)
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# Node/NPM (au cas où, pour le futur)
+node_modules/
+npm-debug.log*
+
+# Fichiers de log
+*.log
+
+# -- FICHIERS SPÉCIFIQUES À IGNORER (Décommentez si besoin) --
+# Edefy - Webflow Ecommerce Website Template.html
+# *.md
