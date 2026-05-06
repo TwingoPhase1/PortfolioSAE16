@@ -404,17 +404,24 @@ section {
     box-shadow: var(--shadow-soft);
 }
 
-.profile-image-placeholder {
+.profile-image {
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--bg-surface-hover), var(--bg-surface));
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid var(--border-color);
     margin-bottom: 2rem;
     position: relative;
+    overflow: hidden;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
 }
 
 .pulse-ring {
@@ -432,11 +439,7 @@ section {
     100% { transform: scale(1.5); opacity: 0; }
 }
 
-.placeholder-text {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-}
+
 
 /* Sections Global */
 .section-header {
